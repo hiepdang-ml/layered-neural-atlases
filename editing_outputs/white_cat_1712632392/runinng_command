@@ -1,0 +1,1 @@
+only_edit.py --trained_model_folder=results/white_cat_04_09_2024__00_44_44_282247_/ --video_name=white_cat --data_folder=data --output_folder=editing_outputs --edit_foreground_path=evaluation_outputs/white_cat_1712631822/030000/texture_orig1.png --edit_background_path=evaluation_outputs/white_cat_1712631822/030000/texture_orig2.png
