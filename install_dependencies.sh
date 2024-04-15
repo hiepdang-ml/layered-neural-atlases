@@ -1,9 +1,6 @@
-conda create --name neural_atlases python=3.7 
-conda activate neural_atlases 
+python -m venv .neural_atlases
 
-conda install pytorch=1.6.0 -c pytorch
-conda install torchvision=0.7.0 -c pytorch
-conda install cudatoolkit=10.1 -c pytorch
+source .neural_atlases/bin/activate
 
 pip install matplotlib
 pip install tensorboard
@@ -12,5 +9,7 @@ pip install scikit-image
 pip install tqdm
 pip install imageio-ffmpeg gdown
 pip install opencv-python
-pip install detectron2 -f   https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.6/index.html
 
+python -m pip install torch==1.12.0+cu113 torchvision==0.13.0+cu113 torchaudio==0.12.0 --extra-index-url https://download.pytorch.org/whl/cu113
+git clone https://github.com/facebookresearch/detectron2.git
+pip install -e detectron2
